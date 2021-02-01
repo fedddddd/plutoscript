@@ -5,6 +5,7 @@
 
 void init()
 {
+    scheduler::init();
     callbacks::init();
 }
 
@@ -51,6 +52,8 @@ DLL_EXPORT void on_initialize_context(const char* script, chaiscript::ChaiScript
 
     // cmd
     chai->add(chaiscript::fun(cmd::execute_command), "cmd_execute");
+
+    chai->add(chaiscript::fun(scheduler::chai_schedule), "schedule");
 }
 
 DLL_EXPORT void on_script_loaded(const char* script, chaiscript::ChaiScript* chai) { }

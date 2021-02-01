@@ -30,5 +30,6 @@ using namespace std::literals;
 #include "game/functions.hpp"
 
 // Plutoscript
+#include "framework/scheduler.hpp"
 #include "framework/Vec3.hpp"
 #include "framework/plutoscript.hpp"
